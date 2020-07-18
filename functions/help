@@ -1,0 +1,12 @@
+   ____    __                   
+  / __/__ / /___ _____  ___ ____
+ _\ \/ -_) __/ // / _ \/ -_) __/
+/___/\__/\__/\_,_/ .__/\__/_/   
+                /_/             
+
+Welcome to Setuper.sh
+Automate annoying tools installation/update like postman and dbeaver for ubuntu 18.04+
+Available parameters:
+help - This help message
+dbeaver - Latest dbeaver installation using the .deb file.
+postman - Latest postman installation using the .tar.gz file.
