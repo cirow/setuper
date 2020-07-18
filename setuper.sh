@@ -13,6 +13,8 @@ case "$1" in
     ;;
     help) cat "${PARENT_PATH}/functions/help"
     ;;
+    remove) echo "Remove function will be added: ${2}"
+    ;;
     *) echo "Argument ${1} not recognized, try setuper help for instructions"
     ;;
 esac
