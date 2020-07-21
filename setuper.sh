@@ -9,7 +9,7 @@ case "$1" in
     ;;
     postman) "${PARENT_PATH}/functions/postman/install.sh"
     ;;
-    haroopad) "${PARENT_PATH}/functions/haroopad/install.sh"
+    vscodium) "${PARENT_PATH}/functions/vscodium/install.sh"
     ;;
     help) cat "${PARENT_PATH}/functions/help"
     ;;
