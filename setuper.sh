@@ -11,6 +11,8 @@ case "$1" in
     ;;
     vscodium) "${PARENT_PATH}/functions/vscodium/install.sh"
     ;;
+    chrome) "${PARENT_PATH}/functions/chrome/install.sh"
+    ;;
     help) cat "${PARENT_PATH}/functions/help"
     ;;
     remove) echo "Remove function will be added: ${2}"
