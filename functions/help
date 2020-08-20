@@ -12,3 +12,4 @@ dbeaver  - Latest dbeaver installation using the .deb file.
 postman  - Latest postman installation using the .tar.gz file.
 vscodium - Latest VsCodium (vscode without MS's proprietary software) adding the apt repo
 chrome   - Latest Chrome installation using the .deb file.
+minikube - Latest minikube installation using curl and minikube install
