@@ -1,7 +1,7 @@
 #!/bin/bash
 WARN='\033[1;33m';
 NORMAL='\033[0m';
-PARENT_PATH="$(dirname "$(readlink -f "$0")")"
+PARENT_PATH="/home/${SUDO_USER}/.cache/setuper"
 
 echo "Downloading https://dl.pstmn.io/download/latest"
 wget -O "${PARENT_PATH}/postman-linux.tar.gz" https://dl.pstmn.io/download/latest/linux64
