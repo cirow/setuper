@@ -23,26 +23,6 @@ checkSudo() {
 }
 
 case "$1" in
-dbeaver)
-    checkSudo
-    "${PARENT_PATH}/functions/dbeaver/install.sh"
-    ;;
-postman)
-    checkSudo
-    "${PARENT_PATH}/functions/postman/install.sh"
-    ;;
-vscodium)
-    checkSudo
-    "${PARENT_PATH}/functions/vscodium/install.sh"
-    ;;
-chrome)
-    checkSudo
-    "${PARENT_PATH}/functions/chrome/install.sh"
-    ;;
-minikube)
-    checkSudo
-    "${PARENT_PATH}/functions/minikube/install.sh"
-    ;;
 help)
     cat "${PARENT_PATH}/functions/help"
     ;;
@@ -50,6 +30,8 @@ remove)
     echo "Remove function will be added: ${2}"
     ;;
 *)
-    echo "Argument ${1} not recognized, try setuper help for instructions"
+    checkSudo
+    [[ -d "${PARENT_PATH}/functions/${1}" ]] || (echo -e "${WARN}${1} not found${NORMAL}" && exit 1)
+    "${PARENT_PATH}/functions/${1}/install.sh"
     ;;
 esac
