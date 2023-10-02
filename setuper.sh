@@ -43,6 +43,10 @@ minikube)
     checkSudo
     "${PARENT_PATH}/functions/minikube/install.sh"
     ;;
+neovim)
+    checkSudo
+    "${PARENT_PATH}/functions/neovim/install.sh"
+    ;;
 help)
     cat "${PARENT_PATH}/functions/help"
     ;;
