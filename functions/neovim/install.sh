@@ -10,16 +10,16 @@ function copydirs(){
     src="${1}"
     dest="${2}"
 
-    echo "${src} -> ${dest}"
-    sudo cp -r "${src}" "${dest}"
+    echo "${src}* -> ${dest}"
+    cp -r "${src}"/* "${dest}"
 }
 
 
-copydirs "${PARENT_PATH}/nvim-linux64/share/"* "/usr/share/"
-copydirs "${PARENT_PATH}/nvim-linux64/man/"*   "/usr/share/man/"
-copydirs "${PARENT_PATH}/nvim-linux64/lib/"*   "/usr/lib/"
-copydirs "${PARENT_PATH}/nvim-linux64/bin/"*   "/usr/bin/"
+copydirs "${PARENT_PATH}/nvim-linux64/share" "/home/${SUDO_USER}/.local/share"
+copydirs "${PARENT_PATH}/nvim-linux64/man"  "/home/${SUDO_USER}/.local/share/man"
+copydirs "${PARENT_PATH}/nvim-linux64/lib"  "/home/${SUDO_USER}/.local/lib"
+copydirs "${PARENT_PATH}/nvim-linux64/bin"  "/home/${SUDO_USER}/.local/bin"
 
 rm -f "${_local_file}" && echo -e "${_local_file} successfuly removed"
 
-nvim --version
+su "${SUDO_USER}" -c 'nvim --version'
