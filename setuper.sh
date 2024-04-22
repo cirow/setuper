@@ -47,6 +47,10 @@ neovim)
     checkSudo
     "${PARENT_PATH}/functions/neovim/install.sh"
     ;;
+signal)
+    checkSudo
+    "${PARENT_PATH}/functions/signal/install.sh"
+    ;;
 help)
     cat "${PARENT_PATH}/functions/help"
     ;;
