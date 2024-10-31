@@ -51,6 +51,10 @@ signal)
     checkSudo
     "${PARENT_PATH}/functions/signal/install.sh"
     ;;
+brave)
+    checkSudo
+    "${PARENT_PATH}/functions/brave/install.sh"
+    ;;
 help)
     cat "${PARENT_PATH}/functions/help"
     ;;
