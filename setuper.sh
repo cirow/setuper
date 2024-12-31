@@ -1,7 +1,7 @@
 #!/bin/bash
 WARN='\033[1;33m'
 NORMAL='\033[0m'
-PARENT_PATH="$(dirname "$(readlink -f "$0")")"
+export PARENT_PATH="$(dirname "$(readlink -f "$0")")"
 
 checkSudo() {
     # Check if the user is sudoing
@@ -50,6 +50,10 @@ neovim)
 signal)
     checkSudo
     "${PARENT_PATH}/functions/signal/install.sh"
+    ;;
+grayjay)
+    checkSudo
+    "${PARENT_PATH}/functions/grayjay/install.sh"
     ;;
 brave)
     checkSudo

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Grayjay
+Path=$APP_PATH
+Exec=./Grayjay
+Comment="Cool streaming app"
+Terminal=false
+PrefersNonDefaultGPU=false
+Icon=$APP_PATH/grayjay.png
+Type=Application
